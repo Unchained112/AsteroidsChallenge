@@ -27,7 +27,7 @@ References:
 
 This project has a web build, try to play the web version at [here: https://unchained112.github.io/AsteroidsWebBuild/](https://unchained112.github.io/AsteroidsWebBuild/)
 
-The gameplay video showcase is [Google Drive link](https://drive.google.com/file/d/1fneMPGZY2wGJ4S84szZvvpkzJ7CcWCLO/view?usp=share_link), but I would suggest you try the web version.
+The gameplay video showcase is [Google Drive link](https://drive.google.com/file/d/1vyrhOUePEHuvmXPY0RFymHQydrHNC5gJ/view?usp=share_link), but I would suggest you try the web version because the video doesn't have sound.
 
 Control: 
 - "W/UpArrow" - thrusting
