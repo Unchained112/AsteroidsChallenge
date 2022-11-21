@@ -4,15 +4,30 @@ Rovio code challenge for Game Developer Position
 
 ## Introduction
 
-This project is my version of the famous arcade game Asteroids. Since I have never played it myself, the game logic is based on the following reference:
-1. [https://freeasteroids.org/](https://freeasteroids.org/)
-2. [https://en.wikipedia.org/wiki/Asteroids_(video_game)](https://en.wikipedia.org/wiki/Asteroids_(video_game))
-3. [https://levelskip.com/classic/Asteroids-Game](https://levelskip.com/classic/Asteroids-Game)
+This project is my version of the famous arcade game Asteroids. After reading some comments about the game, I can feel how it affects both players and the games developed later. Thus, I decided to make it as similar as possible. Since I have never played it myself, the game logic is based on the reference. 
+
+Rules:
+1. Player has 3 lives at the start, for every 10,000 scores, the player gets one more life (5 at maximum). The game will be over when the player loses all 3 lives.
+2. Player loses lives when colliding with asteroids, enemies, and bullets shot from the enemy.
+3. Asteroids have 3 sizes. Once an asteroid is destroyed, it will split into two smaller ones apart from the smallest one.
+4. Asteroid score: Large - 20, Mid - 50, Small - 100.
+5. New asteroid will spawn only after the player clears the last wave of asteroids
+6. Enemy flight will spawn every period of time (40 seconds in the beginning).
+7. With the score getting higher, the period gets shorter.
+8. After the score reaches 40,000, there are no more asteroids, only enemy flights.
+9. All the objects will be displayed within the screen, namely, if one goes out of the boundary, it will go back from the other side of the boundary.
 
 Game assets resources (both image and sound, sorry for forgetting the specifics links):
 1. [https://opengameart.org/](https://opengameart.org/)
 
+References:
+1. [https://freeasteroids.org/](https://freeasteroids.org/)
+2. [https://en.wikipedia.org/wiki/Asteroids_(video_game)](https://en.wikipedia.org/wiki/Asteroids_(video_game))
+3. [https://levelskip.com/classic/Asteroids-Game](https://levelskip.com/classic/Asteroids-Game)
+
 This project has a web build, try to play the web version at [here: https://unchained112.github.io/AsteroidsWebBuild/](https://unchained112.github.io/AsteroidsWebBuild/)
+
+The gameplay video showcase is [Google Drive link](https://drive.google.com/file/d/1fneMPGZY2wGJ4S84szZvvpkzJ7CcWCLO/view?usp=share_link), but I would suggest you try the web version.
 
 Control: 
 - "W/UpArrow" - thrusting
