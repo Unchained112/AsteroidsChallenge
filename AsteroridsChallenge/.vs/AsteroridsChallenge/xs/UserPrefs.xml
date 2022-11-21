@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{80C1ABDC-5E77-99F2-D03A-5FB91E4325F0}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/GameManager.cs" Line="15" Column="36" />
+      <File FileName="Assets/Scripts/Player.cs" Line="37" Column="56" />
+      <File FileName="Assets/Scripts/Asteroid.cs" Line="24" Column="47" />
+      <File FileName="Assets/Scripts/Bullet.cs" Line="28" Column="35" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="44" Column="50" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AsteroridsChallenge" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="GameManager.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5c791f79-34ec-4e72-964b-350b8ff6ebca" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
