@@ -9,6 +9,9 @@ This project is my version of the famous arcade game Asteroids. Since I have nev
 2. [https://en.wikipedia.org/wiki/Asteroids_(video_game)](https://en.wikipedia.org/wiki/Asteroids_(video_game))
 3. [https://levelskip.com/classic/Asteroids-Game](https://levelskip.com/classic/Asteroids-Game)
 
+Game assets resources (both image and sound, sorry for forgetting the specifics links):
+1. [https://opengameart.org/](https://opengameart.org/)
+
 This project has a web build, try to play the web version at [here: https://unchained112.github.io/AsteroidsWebBuild/](https://unchained112.github.io/AsteroidsWebBuild/)
 
 Control: 
@@ -57,10 +60,11 @@ Bullet:
 
 Others:
 - Particle system for the explosion effect (bound to GM)
+- Utility functions for wrap the position of game objects inside the screen.
 
 ## Problems Encountered
 
-Where and when to generate the asteroids?
+### Where and when to generate the asteroids?
 
 From my observation of the [Asteroids play video](https://www.youtube.com/watch?v=WYSupJ5r2zo), generally, the asteroids spawn evenly from the boundary of the screen with an initial speed moving towards the inside screen. Asteroids are generated wave after wave, one wave has more than the last one, starting with 4. Thus, in this game, I set the rules as the following:
 1. Screen is divided into 4 parts, each wave has an even number of asteroids that evenly come from those four parts. (if mod 4 is 2, they are distributed to any 2 parts).
@@ -71,23 +75,23 @@ Check the image below for how it works.
 
 ![Asteroid Generation](./ReadmeImage/Map.png.png)
 
-How do asteroids splits?
+### How do asteroids split?
 
 From the game video, there are 3 sizes of different asteroids. Each asteroid (not the smallest one) will split into two smaller ones after being destroyed by the bullet. I hope to make this process fit people's physics intuition, so I calculated their speed according to the Momentum Conservation with the following simplified derivation:
 
 ![Momentum Conservation](./ReadmeImage/MC.png)
 
-How to notice the Game Manager when the game object is destroyed?
+### How to notice the Game Manager when the game object is destroyed?
 
 - I used C# `delegate` and `event` is used to achieve.
 - In Asteroid, Enemy, and Bullet game objects, I had public event members that are triggered once the game object collided with others (with a certain tag). Those work as the publisher.
 - The Game Manager subscribes to the publisher every time a game object is initialized. The unsubscription is done when `GameOver`, namely, the player lost all 3 lives.  
 
-How to spawn enemies every period of time?
+### How to spawn enemies every period of time?
 
 - The Unity *coroutine* is used to allow enemies to spawn every period of time and allow enemies to shoot every period of time.
 - The delayed function is `IEnumerator` and is started by `StartCoroutine`.
 
-What to expect?
+### What to expect?
 - Currently, the player will spawn 2s later after death (as long as the player still has lived). However, it is not guaranteed that a player will be destroyed immediately after respawning. I haven't decided how to solve this.
 - To make it playable on mobile devices on the website, more buttons could be added as input. Currently, the schedule for the implementation of this function remains uncertain.  
