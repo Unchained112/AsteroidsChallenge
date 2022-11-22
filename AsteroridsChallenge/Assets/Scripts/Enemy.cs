@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             enemy_die?.Invoke(transform.position);
+            StopCoroutine(Shoot());
             Destroy(gameObject, 0.0f);
         }
     }

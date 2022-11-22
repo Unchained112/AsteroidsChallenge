@@ -117,6 +117,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         Destroy(player);
+        StopAllCoroutines();
         foreach (Asteroid asteroid in asteroids)
         {
             if (asteroid != null) Destroy(asteroid.gameObject, 0.0f);
@@ -271,7 +272,7 @@ public class GameManager : MonoBehaviour
     // --------------- Enemy --------------- //
 
     private IEnumerator SpawnEnemy() {
-        while (true && player != null)
+        while (true)
         {
             yield return new WaitForSeconds(Mathf.Max(2.0f, 40.0f - total * 0.0009f));
             Vector2 pos;
